@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -14,17 +12,17 @@
   :root {
     --radius: 0.5rem;
   }
-  body{
-    @apply font-primary bg-primary text-white leading-loose
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
   }
-  .h1{
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
-  .h2{
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
   }
-  .h3{
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;
@@ -32,4 +30,15 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+}
+/* Custom styles for Swiper pagination */
+.swiper-pagination-bullet {
+  width: 8px !important; /* Increase bullet width */
+  height: 8px !important; /* Increase bullet height */
+  background-color: #ddd !important; /* Default color for pagination bullets */
+  opacity: 1 !important; /* Make sure bullets are fully opaque */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #10b981 !important; /* Change active bullet color to green */
 }
