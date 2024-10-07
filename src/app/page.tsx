@@ -2,6 +2,7 @@ import Photo from "@/components/home/Photo";
 import Social from "@/components/home/Social";
 import Stats from "@/components/home/Stats";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
@@ -20,14 +21,16 @@ export default function Home() {
               computer science and a love for technology.
             </p>
             <div className="flex flex-col xl:flex-row item-center gap-8">
+              <Link href={"Ebrahim CV Resume.pdf"} download>
               <Button
                 variant={"outline"}
                 size={"lg"}
                 className="uppercase flex items-center gap-2"
-              >
+                >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
+                </Link>
               <div className="mb-8 xl:mb-0 flex items-center justify-center">
                 <Social />
               </div>

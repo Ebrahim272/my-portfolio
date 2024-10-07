@@ -39,7 +39,7 @@ const projects = [
     num: "02",
     category: "frontend",
     title: "Rising Root",
-    description: "A  platform built using Next.js and React.",
+    description: "Rising Root is a platform built with Next.js and React, focused on delivering a seamless and responsive user experience.",
     stack: [
       { name: "Html 5" },
       { name: "Javascript" },
@@ -54,7 +54,7 @@ const projects = [
     num: "03",
     category: "frontend",
     title: "Peshtaaz",
-    description: " platform built using Next.js and React.",
+    description: " Peshtaaz is a feature-rich platform developed with Next.js and React. The project utilizes a combination of HTML5, CSS3, and Tailwind CSS to create a responsive design that adapts to any screen size.",
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },

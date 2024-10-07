@@ -15,8 +15,8 @@ import { motion } from "framer-motion";
 const about = {
   title: "About Me",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae felis tempus ultricies. Integer tempor velit sed nunc consectetur, id luctus nunc consectetur. Sed placerat, mauris vel dignissim tempus, enim neque tristique mauris, in laoreet ipsum ligula in metus.",
-  info: [
+    "I am Ebrahim, a passionate front-end developer with 3 years of experience in building responsive and user-friendly web applications. My expertise lies in crafting modern and efficient interfaces using the latest web technologies. I enjoy turning complex problems into simple, beautiful solutions that enhance the user experience.",
+      info: [
     {
       fieldName: "Name",
       fieldValue: "Ebrahim Hossenzada",
@@ -50,10 +50,9 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "",
   title: "Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae felis tempus ultricies. Integer tempor velit sed nunc consectetur, id luctus nunc consectetur. Sed placerat, mauris vel dignissim tempus, enim neque tristique mauris, in laoreet ipsum ligula in metus.",
+    "With over 3 years of experience as a front-end developer, I have worked on a variety of web projects, focusing on creating intuitive and responsive user interfaces. I have hands-on experience with modern JavaScript frameworks like React and Next.js, as well as proficiency in CSS frameworks such as Tailwind CSS and Ant Design. My work includes collaborating with cross-functional teams to deliver high-quality, scalable solutions that meet client needs and drive business outcomes.",
 
   item: [
     {
@@ -74,7 +73,7 @@ const education = {
   icon: "",
   title: "Education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae felis tempus ultricies. Integer tempor velit sed nunc consectetur, id luctus nunc consectetur. Sed placerat, mauris vel dignissim tempus, enim neque tristique mauris, in laoreet ipsum ligula in metus.",
+    "Graduated from Heart University with a degree in Computer Science. During my studies, I gained a solid foundation in web development, algorithms, and software engineering principles. My education provided me with the technical skills and problem-solving abilities that I continue to apply in my career as a front-end developer.",
   item: [
     {
       institution: "Online Course Platform",
@@ -94,7 +93,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae felis tempus ultricies. Integer tempor velit sed nunc consectetur, id luctus nunc consectetur. Sed placerat, mauris vel dignissim tempus, enim neque tristique mauris, in laoreet ipsum ligula in metus.",
+    "As a front-end developer, I have a strong command of modern web technologies. My skill set includes expertise in HTML5, CSS3, and JavaScript, as well as proficiency in frameworks like React and Next.js. I am also experienced in working with CSS libraries such as Tailwind CSS and Ant Design to create responsive and visually appealing interfaces. In addition to development, I am skilled in version control with Git, and have experience collaborating in Agile environments. My focus is on delivering clean, maintainable code while ensuring excellent user experience.",
   skillList: [
     {
       skillName: "HTML5",
@@ -157,7 +156,7 @@ export default function ResumePage() {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 capitalize">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -187,7 +186,7 @@ export default function ResumePage() {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 capitalize">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -218,7 +217,7 @@ export default function ResumePage() {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 capitalize">
                     {skills.description}
                   </p>
                 </div>
@@ -244,7 +243,7 @@ export default function ResumePage() {
             <TabsContent value="about" className="w-full text-center xl:text-left">
             <div className="flex flex-col gap-[30px]">
               <h3 className="text-4xl font-bold">{about.title}</h3>
-              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 capitalize">{about.description}</p>
               <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                 {about.info.map((item, index) => (
                   <li key={index} className="flex items-center gap-4 justify-center xl:justify-start">

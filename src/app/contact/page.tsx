@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Swal from 'sweetalert2'
 
 const info = [
   {
@@ -33,6 +34,32 @@ const info = [
   },
 ];
 export default function ContactPage() {
+
+  async function handleSubmit(event:any) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "05b5e6ee-62fe-497b-8144-6b6d70175706");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+      Swal.fire({
+        title: "Success",
+        text: "Message sent successfully",
+        icon: "success"
+      });    }
+}
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -50,23 +77,25 @@ export default function ContactPage() {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form
+            onSubmit={handleSubmit}
               action=""
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
             >
               <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
-                vero earum dolores magnam non deserunt ut dolore ad error dicta
-                praesentium possimus. Adipisci, sequi. At vel corporis sint esse
-                odit.
+              <p className="text-white/60 capitalize">
+                I specialize in crafting bespoke digital solutions tailored to
+                your unique needs. Whether you're looking to build a responsive
+                website, develop a modern web application, or enhance your
+                online presence, I'm here to help. Let's collaborate to turn
+                your ideas into reality and create something truly impactful.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstName" placeholder="First Name" />
-                <Input type="lastName" placeholder="Last Name" />
-                <Input type="emailAddress" placeholder="Email Address" />
-                <Input type="phoneNumber" placeholder="Phone Number" />
+                <Input type="firstName" placeholder="First Name" name="firstName" required/>
+                <Input type="lastName" placeholder="Last Name" name="lastName" required/>
+                <Input type="emailAddress" placeholder="Email Address" name="emailAddress" required/>
+                <Input type="phoneNumber" placeholder="Phone Number" name="phoneNumber" required/>
               </div>
-              <Select>
+              <Select name="select" required>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -80,6 +109,8 @@ export default function ContactPage() {
                 </SelectContent>
               </Select>
               <Textarea
+              required
+              name="message"
                 className="h-[200px]"
                 placeholder="Type your message here."
               />

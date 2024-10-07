@@ -9,16 +9,15 @@ const socials =[
   },
   {
     icon: <FaLinkedinIn/>,
-    url: '#'
+    url: 'https://www.linkedin.com/in/ebrahim-hossenzade-037346285?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BAr8PhBaKTMmRHXej2RuzWA%3D%3D'
   },
   {
     icon: <FaTelegram/>,
-    url: '#'
+    url: 'https://t.me/ER272'
   },
   {
     icon: <FaWhatsapp/>,
-    url: '#'
-  },
+    url: 'https://wa.me/+98794574243'  },
 
 ]
 export default function Social() {
