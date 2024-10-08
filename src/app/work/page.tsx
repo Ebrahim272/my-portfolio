@@ -48,7 +48,7 @@ const projects = [
     ],
     live: "https://rising-root.vercel.app/",
     github: "https://github.com/SayeedMahdi/rising-root",
-    image: "/work/rising-root.PNG",
+    image: "/work/rising-root.png",
   },
   {
     num: "03",
