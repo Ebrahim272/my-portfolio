@@ -23,7 +23,8 @@ const projects = [
     num: "01",
     category: "frontend",
     title: "Learning Box",
-    description: "A simple learning platform built using Next.js and React.",
+    description:
+      "A dynamic and intuitive learning platform designed using Next.js and React. It features a clean UI, fast performance, and a mobile-responsive layout, making it ideal for online learners seeking a modern web experience.",
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
@@ -31,7 +32,7 @@ const projects = [
       { name: "Tailwind.css" },
       { name: "Next.js" },
     ],
-    live: "https://lib-frontend-six.vercel.app/",
+    live: "https://learninbox.com/",
     github: "https://github.com/writeboxco/LIBFrontend",
     image: "/work/learning-box.PNG",
   },
@@ -39,7 +40,8 @@ const projects = [
     num: "02",
     category: "frontend",
     title: "Rising Root",
-    description: "Rising Root is a platform built with Next.js and React, focused on delivering a seamless and responsive user experience.",
+    description:
+      "A sleek, responsive web application developed to ensure seamless interactions across all devices. Built with Next.js and Tailwind CSS, Rising Root combines modern design principles with robust frontend performance.",
     stack: [
       { name: "Html 5" },
       { name: "Javascript" },
@@ -54,7 +56,8 @@ const projects = [
     num: "03",
     category: "frontend",
     title: "Peshtaaz",
-    description: " Peshtaaz is a feature-rich platform developed with Next.js and React. The project utilizes a combination of HTML5, CSS3, and Tailwind CSS to create a responsive design that adapts to any screen size.",
+    description:
+      "A feature-rich, fully responsive platform crafted using Next.js, Tailwind CSS, and React. Peshtaaz emphasizes accessibility and user experience, making it adaptable to various screen sizes with elegant transitions and UI consistency.",
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
@@ -65,6 +68,77 @@ const projects = [
     live: "https://peshtaaz.vercel.app/",
     github: "https://github.com/SayeedMahdi/Peshtaaz",
     image: "/work/peshtaaz.PNG",
+  },
+  {
+    num: "04",
+    category: "frontend & backend",
+    title: "Wahswaad",
+    description:
+      "An eCommerce-ready platform blending Next.js with Shopify to deliver a smooth and scalable shopping experience. Designed with both aesthetics and performance in mind, Wahswaad supports responsive design and efficient product management.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Tailwind.css" },
+      { name: "Next.js" },
+      { name: "shopify" },
+    ],
+    live: "https://www.wahswaad.com/",
+    github: "https://github.com/MahdiMohammadi98125/wahswaad",
+    image: "/work/wahswaad.jpeg",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Mars Coders",
+    description:
+      "A visually engaging and developer-centric platform built using Next.js, Tailwind CSS, and React. Mars Coders highlights best practices in frontend development while delivering an optimal browsing experience for tech-savvy users.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Tailwind.css" },
+      { name: "Next.js" },
+    ],
+    live: "https://www.marscoders.tech/",
+    github: "https://github.com/MahdiMohammadi98125/MarsCoders-Website",
+    image: "/work/marsCoders.jpeg",
+  },
+  {
+    num: "06",
+    category: "frontend & backend",
+    title: "Change makers",
+    description:
+      "A full-stack application developed with Next.js, Prisma, and React, focused on impactful community-driven initiatives. Change Makers features robust backend integration and a clean, responsive UI that adapts effortlessly to user needs.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Tailwind.css" },
+      { name: "Next.js" },
+      { name: "Prisma" },
+    ],
+    live: "https://www.cmworld.org/",
+    github: "https://github.com/MahdiMohammadi98125/change-makers",
+    image: "/work/changemaker.jpeg",
+  },
+  {
+    num: "07",
+    category: "Mobile App",
+    title: "Learning Box",
+    description:
+      "A cross-platform mobile learning app built with React Native and GraphQL, designed to offer a smooth, intuitive experience for users on the go. Learning Box delivers a clean and responsive UI, optimized for performance and accessibility, making it a perfect companion for learners seeking flexible and modern mobile education.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Tailwind.css" },
+      { name: "Next.js" },
+      { name: "Prisma" },
+    ],
+    live: "https://www.learninbox.com/",
+    github: "https://github.com/RezaHabibi1001/lib_seeker_app",
+    image: "/work/app.png",
   },
 ];
 export default function WorkPage() {
@@ -144,12 +218,12 @@ export default function WorkPage() {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-fit relative group flex justify-center items-center bg-pink-50/20">
+                  <div className="h-fit relative group flex justify-center items-center">
                     <div className="relative w-full">
                       <Image
                         alt=""
                         src={project.image}
-                        className="object-contain w-full"
+                        className="object-contain w-full sm:h-[400px] h-[300px]"
                         width={1200}
                         height={1200}
                       />
