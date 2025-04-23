@@ -21,23 +21,23 @@ export default function Home() {
               computer science and a love for technology.
             </p>
             <div className="flex flex-col xl:flex-row item-center gap-8">
-              <Link href={"Ebrahim CV Resume.pdf"} download>
-              <Button
-                variant={"outline"}
-                size={"lg"}
-                className="uppercase flex items-center gap-2"
+              <Link href={"Ebrahim_Hossainzada_Resume.pdf"} download>
+                <Button
+                  variant={"outline"}
+                  size={"lg"}
+                  className="uppercase flex items-center gap-2"
                 >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
-                </Link>
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </Link>
               <div className="mb-8 xl:mb-0 flex items-center justify-center">
                 <Social />
               </div>
             </div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo/>
+            <Photo />
           </div>
         </div>
       </div>
